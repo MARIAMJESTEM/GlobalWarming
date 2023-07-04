@@ -6,7 +6,7 @@ data {
 }
 
 generated quantities {
-  real sigma = exponential_rng(0.067);
+  real sigma = normal_rng(0.1,0.05);
   real nu = gamma_rng(2, 0.1);
   real alpha = normal_rng(0.7, 0.1);
   real beta_CO2 = normal_rng(0, 0.1);
